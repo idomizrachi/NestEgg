@@ -1,0 +1,833 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0325E384E34A2D06B3344AC4 /* Pods_ImageHandlerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30880AD502ED511A31A6FA0A /* Pods_ImageHandlerUITests.framework */; };
+		271124117480C31BB147BBF2 /* Pods_NestEggUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B1676B544F659B696F86FA /* Pods_NestEggUITests.framework */; };
+		3FCF8F1782481ED79BA1DC61 /* Pods_ImageHandlerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B0B28E203D13AF1F2665912 /* Pods_ImageHandlerTests.framework */; };
+		995C4960202984BE00E04992 /* NestEggHttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995C495F202984BE00E04992 /* NestEggHttpClient.swift */; };
+		995C4962202984E900E04992 /* NestEggCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995C4961202984E900E04992 /* NestEggCache.swift */; };
+		995C49662029F9BA00E04992 /* NestEgg+Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995C49652029F9BA00E04992 /* NestEgg+Errors.swift */; };
+		995C4969202A4BD500E04992 /* HttpClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 995C4967202A4BD400E04992 /* HttpClient.m */; };
+		9970FC0A20288B2800B23273 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9970FC0920288B2800B23273 /* AppDelegate.m */; };
+		9970FC0D20288B2800B23273 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9970FC0C20288B2800B23273 /* ViewController.m */; };
+		9970FC1020288B2800B23273 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9970FC0E20288B2800B23273 /* Main.storyboard */; };
+		9970FC1220288B2800B23273 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9970FC1120288B2800B23273 /* Assets.xcassets */; };
+		9970FC1520288B2800B23273 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9970FC1320288B2800B23273 /* LaunchScreen.storyboard */; };
+		9970FC1820288B2800B23273 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9970FC1720288B2800B23273 /* main.m */; };
+		9970FC2220288B2800B23273 /* ImageHandlerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9970FC2120288B2800B23273 /* ImageHandlerTests.m */; };
+		9970FC2D20288B2800B23273 /* ImageHandlerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9970FC2C20288B2800B23273 /* ImageHandlerUITests.m */; };
+		9970FC3D20288B4200B23273 /* NestEgg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9970FC3C20288B4200B23273 /* NestEgg.swift */; };
+		CA5A535C8133C348D78ADC6D /* Pods_NestEgg.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAAA287B918899CBECDCDAB1 /* Pods_NestEgg.framework */; };
+		FB61753502F6E2416CE5E07A /* Pods_NestEggTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED4E6DAFFB2F348744182C69 /* Pods_NestEggTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9970FC1E20288B2800B23273 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9970FBFD20288B2800B23273 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9970FC0420288B2800B23273;
+			remoteInfo = ImageHandler;
+		};
+		9970FC2920288B2800B23273 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9970FBFD20288B2800B23273 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9970FC0420288B2800B23273;
+			remoteInfo = ImageHandler;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		00B1676B544F659B696F86FA /* Pods_NestEggUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NestEggUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		139D220A368137E043CC94B3 /* Pods-ImageHandlerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageHandlerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ImageHandlerUITests/Pods-ImageHandlerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		1816BD5F3CB8B1ABE4211DC8 /* Pods-NestEggTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NestEggTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NestEggTests/Pods-NestEggTests.release.xcconfig"; sourceTree = "<group>"; };
+		30880AD502ED511A31A6FA0A /* Pods_ImageHandlerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImageHandlerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		45A5FB4F1626463775B245F5 /* Pods-NestEgg.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NestEgg.release.xcconfig"; path = "Pods/Target Support Files/Pods-NestEgg/Pods-NestEgg.release.xcconfig"; sourceTree = "<group>"; };
+		49C56116A6192A6F782B2E43 /* Pods-ImageHandlerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageHandlerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ImageHandlerTests/Pods-ImageHandlerTests.release.xcconfig"; sourceTree = "<group>"; };
+		53987398835ED302BB36BF52 /* Pods-ImageHandler.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageHandler.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ImageHandler/Pods-ImageHandler.debug.xcconfig"; sourceTree = "<group>"; };
+		5B0B28E203D13AF1F2665912 /* Pods_ImageHandlerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImageHandlerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		696D292F49CF2833A0B63379 /* Pods-NestEggTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NestEggTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NestEggTests/Pods-NestEggTests.debug.xcconfig"; sourceTree = "<group>"; };
+		78D7EBB553A68242C79C98A4 /* Pods-NestEggUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NestEggUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NestEggUITests/Pods-NestEggUITests.release.xcconfig"; sourceTree = "<group>"; };
+		881A494A826D115B1C6E2B29 /* Pods_ImageHandler.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImageHandler.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8DE8E66AEE47242F32485F88 /* Pods-ImageHandlerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageHandlerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ImageHandlerTests/Pods-ImageHandlerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		995C495F202984BE00E04992 /* NestEggHttpClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NestEggHttpClient.swift; sourceTree = "<group>"; };
+		995C4961202984E900E04992 /* NestEggCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NestEggCache.swift; sourceTree = "<group>"; };
+		995C49632029A44B00E04992 /* libapple_crypto.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libapple_crypto.tbd; path = usr/lib/libapple_crypto.tbd; sourceTree = SDKROOT; };
+		995C49652029F9BA00E04992 /* NestEgg+Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NestEgg+Errors.swift"; sourceTree = "<group>"; };
+		995C4967202A4BD400E04992 /* HttpClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpClient.m; sourceTree = "<group>"; };
+		995C4968202A4BD500E04992 /* HttpClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpClient.h; sourceTree = "<group>"; };
+		9970FC0520288B2800B23273 /* NestEgg.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NestEgg.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9970FC0820288B2800B23273 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		9970FC0920288B2800B23273 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		9970FC0B20288B2800B23273 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		9970FC0C20288B2800B23273 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		9970FC0F20288B2800B23273 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9970FC1120288B2800B23273 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9970FC1420288B2800B23273 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9970FC1620288B2800B23273 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9970FC1720288B2800B23273 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9970FC1D20288B2800B23273 /* NestEggTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NestEggTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9970FC2120288B2800B23273 /* ImageHandlerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageHandlerTests.m; sourceTree = "<group>"; };
+		9970FC2320288B2800B23273 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9970FC2820288B2800B23273 /* NestEggUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NestEggUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9970FC2C20288B2800B23273 /* ImageHandlerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageHandlerUITests.m; sourceTree = "<group>"; };
+		9970FC2E20288B2800B23273 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9970FC3B20288B4200B23273 /* NestEgg-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NestEgg-Bridging-Header.h"; sourceTree = "<group>"; };
+		9970FC3C20288B4200B23273 /* NestEgg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NestEgg.swift; sourceTree = "<group>"; };
+		B8260233F9EC14D940B3203C /* Pods-ImageHandler.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageHandler.release.xcconfig"; path = "Pods/Target Support Files/Pods-ImageHandler/Pods-ImageHandler.release.xcconfig"; sourceTree = "<group>"; };
+		BAAA287B918899CBECDCDAB1 /* Pods_NestEgg.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NestEgg.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DEB13D4B92E04A72D241D93F /* Pods-NestEgg.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NestEgg.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NestEgg/Pods-NestEgg.debug.xcconfig"; sourceTree = "<group>"; };
+		ED4E6DAFFB2F348744182C69 /* Pods_NestEggTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NestEggTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F11B7147EB8CA8B871D6DF01 /* Pods-ImageHandlerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageHandlerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ImageHandlerUITests/Pods-ImageHandlerUITests.release.xcconfig"; sourceTree = "<group>"; };
+		FEE2480AAA9EF872CA939DA9 /* Pods-NestEggUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NestEggUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NestEggUITests/Pods-NestEggUITests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9970FC0220288B2800B23273 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA5A535C8133C348D78ADC6D /* Pods_NestEgg.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9970FC1A20288B2800B23273 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FCF8F1782481ED79BA1DC61 /* Pods_ImageHandlerTests.framework in Frameworks */,
+				FB61753502F6E2416CE5E07A /* Pods_NestEggTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9970FC2520288B2800B23273 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0325E384E34A2D06B3344AC4 /* Pods_ImageHandlerUITests.framework in Frameworks */,
+				271124117480C31BB147BBF2 /* Pods_NestEggUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		072B97293827B3F122013519 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				53987398835ED302BB36BF52 /* Pods-ImageHandler.debug.xcconfig */,
+				B8260233F9EC14D940B3203C /* Pods-ImageHandler.release.xcconfig */,
+				8DE8E66AEE47242F32485F88 /* Pods-ImageHandlerTests.debug.xcconfig */,
+				49C56116A6192A6F782B2E43 /* Pods-ImageHandlerTests.release.xcconfig */,
+				139D220A368137E043CC94B3 /* Pods-ImageHandlerUITests.debug.xcconfig */,
+				F11B7147EB8CA8B871D6DF01 /* Pods-ImageHandlerUITests.release.xcconfig */,
+				DEB13D4B92E04A72D241D93F /* Pods-NestEgg.debug.xcconfig */,
+				45A5FB4F1626463775B245F5 /* Pods-NestEgg.release.xcconfig */,
+				696D292F49CF2833A0B63379 /* Pods-NestEggTests.debug.xcconfig */,
+				1816BD5F3CB8B1ABE4211DC8 /* Pods-NestEggTests.release.xcconfig */,
+				FEE2480AAA9EF872CA939DA9 /* Pods-NestEggUITests.debug.xcconfig */,
+				78D7EBB553A68242C79C98A4 /* Pods-NestEggUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		6606878439D5AB1D1DE7FCBF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				995C49632029A44B00E04992 /* libapple_crypto.tbd */,
+				881A494A826D115B1C6E2B29 /* Pods_ImageHandler.framework */,
+				5B0B28E203D13AF1F2665912 /* Pods_ImageHandlerTests.framework */,
+				30880AD502ED511A31A6FA0A /* Pods_ImageHandlerUITests.framework */,
+				BAAA287B918899CBECDCDAB1 /* Pods_NestEgg.framework */,
+				ED4E6DAFFB2F348744182C69 /* Pods_NestEggTests.framework */,
+				00B1676B544F659B696F86FA /* Pods_NestEggUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9970FBFC20288B2800B23273 = {
+			isa = PBXGroup;
+			children = (
+				9970FC0720288B2800B23273 /* NestEgg */,
+				9970FC2020288B2800B23273 /* NestEggTests */,
+				9970FC2B20288B2800B23273 /* NestEggUITests */,
+				9970FC0620288B2800B23273 /* Products */,
+				072B97293827B3F122013519 /* Pods */,
+				6606878439D5AB1D1DE7FCBF /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		9970FC0620288B2800B23273 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9970FC0520288B2800B23273 /* NestEgg.app */,
+				9970FC1D20288B2800B23273 /* NestEggTests.xctest */,
+				9970FC2820288B2800B23273 /* NestEggUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9970FC0720288B2800B23273 /* NestEgg */ = {
+			isa = PBXGroup;
+			children = (
+				9970FC3A20288B2E00B23273 /* lib */,
+				9970FC0820288B2800B23273 /* AppDelegate.h */,
+				9970FC0920288B2800B23273 /* AppDelegate.m */,
+				9970FC0B20288B2800B23273 /* ViewController.h */,
+				9970FC0C20288B2800B23273 /* ViewController.m */,
+				995C4968202A4BD500E04992 /* HttpClient.h */,
+				995C4967202A4BD400E04992 /* HttpClient.m */,
+				9970FC0E20288B2800B23273 /* Main.storyboard */,
+				9970FC1120288B2800B23273 /* Assets.xcassets */,
+				9970FC1320288B2800B23273 /* LaunchScreen.storyboard */,
+				9970FC1620288B2800B23273 /* Info.plist */,
+				9970FC1720288B2800B23273 /* main.m */,
+			);
+			path = NestEgg;
+			sourceTree = "<group>";
+		};
+		9970FC2020288B2800B23273 /* NestEggTests */ = {
+			isa = PBXGroup;
+			children = (
+				9970FC2120288B2800B23273 /* ImageHandlerTests.m */,
+				9970FC2320288B2800B23273 /* Info.plist */,
+			);
+			path = NestEggTests;
+			sourceTree = "<group>";
+		};
+		9970FC2B20288B2800B23273 /* NestEggUITests */ = {
+			isa = PBXGroup;
+			children = (
+				9970FC2C20288B2800B23273 /* ImageHandlerUITests.m */,
+				9970FC2E20288B2800B23273 /* Info.plist */,
+			);
+			path = NestEggUITests;
+			sourceTree = "<group>";
+		};
+		9970FC3A20288B2E00B23273 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				9970FC3C20288B4200B23273 /* NestEgg.swift */,
+				9970FC3B20288B4200B23273 /* NestEgg-Bridging-Header.h */,
+				995C495F202984BE00E04992 /* NestEggHttpClient.swift */,
+				995C4961202984E900E04992 /* NestEggCache.swift */,
+				995C49652029F9BA00E04992 /* NestEgg+Errors.swift */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9970FC0420288B2800B23273 /* NestEgg */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9970FC3120288B2800B23273 /* Build configuration list for PBXNativeTarget "NestEgg" */;
+			buildPhases = (
+				6F035B9B202C20403DCF11FC /* [CP] Check Pods Manifest.lock */,
+				9970FC0120288B2800B23273 /* Sources */,
+				9970FC0220288B2800B23273 /* Frameworks */,
+				9970FC0320288B2800B23273 /* Resources */,
+				42E737EF810B7B3A26C995D0 /* [CP] Embed Pods Frameworks */,
+				2A95F85CA9295FCF497A7DD5 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NestEgg;
+			productName = ImageHandler;
+			productReference = 9970FC0520288B2800B23273 /* NestEgg.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9970FC1C20288B2800B23273 /* NestEggTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9970FC3420288B2800B23273 /* Build configuration list for PBXNativeTarget "NestEggTests" */;
+			buildPhases = (
+				C7AB7F850DD1CD4B638401D9 /* [CP] Check Pods Manifest.lock */,
+				9970FC1920288B2800B23273 /* Sources */,
+				9970FC1A20288B2800B23273 /* Frameworks */,
+				9970FC1B20288B2800B23273 /* Resources */,
+				D5460CA80C94EA9649C585F0 /* [CP] Embed Pods Frameworks */,
+				640A87CDF1AB7D2912886DD6 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9970FC1F20288B2800B23273 /* PBXTargetDependency */,
+			);
+			name = NestEggTests;
+			productName = ImageHandlerTests;
+			productReference = 9970FC1D20288B2800B23273 /* NestEggTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9970FC2720288B2800B23273 /* NestEggUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9970FC3720288B2800B23273 /* Build configuration list for PBXNativeTarget "NestEggUITests" */;
+			buildPhases = (
+				C0FCCEF7B86040BB2AF30694 /* [CP] Check Pods Manifest.lock */,
+				9970FC2420288B2800B23273 /* Sources */,
+				9970FC2520288B2800B23273 /* Frameworks */,
+				9970FC2620288B2800B23273 /* Resources */,
+				FBD77B858D3395918BB48718 /* [CP] Embed Pods Frameworks */,
+				FD2821D649FE6B4A3FFAA648 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9970FC2A20288B2800B23273 /* PBXTargetDependency */,
+			);
+			name = NestEggUITests;
+			productName = ImageHandlerUITests;
+			productReference = 9970FC2820288B2800B23273 /* NestEggUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9970FBFD20288B2800B23273 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Ido Mizrachi";
+				TargetAttributes = {
+					9970FC0420288B2800B23273 = {
+						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
+						ProvisioningStyle = Automatic;
+					};
+					9970FC1C20288B2800B23273 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 9970FC0420288B2800B23273;
+					};
+					9970FC2720288B2800B23273 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 9970FC0420288B2800B23273;
+					};
+				};
+			};
+			buildConfigurationList = 9970FC0020288B2800B23273 /* Build configuration list for PBXProject "NestEgg" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9970FBFC20288B2800B23273;
+			productRefGroup = 9970FC0620288B2800B23273 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9970FC0420288B2800B23273 /* NestEgg */,
+				9970FC1C20288B2800B23273 /* NestEggTests */,
+				9970FC2720288B2800B23273 /* NestEggUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9970FC0320288B2800B23273 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9970FC1520288B2800B23273 /* LaunchScreen.storyboard in Resources */,
+				9970FC1220288B2800B23273 /* Assets.xcassets in Resources */,
+				9970FC1020288B2800B23273 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9970FC1B20288B2800B23273 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9970FC2620288B2800B23273 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2A95F85CA9295FCF497A7DD5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NestEgg/Pods-NestEgg-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		42E737EF810B7B3A26C995D0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-NestEgg/Pods-NestEgg-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NestEgg/Pods-NestEgg-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		640A87CDF1AB7D2912886DD6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NestEggTests/Pods-NestEggTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6F035B9B202C20403DCF11FC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NestEgg-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C0FCCEF7B86040BB2AF30694 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NestEggUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C7AB7F850DD1CD4B638401D9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NestEggTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D5460CA80C94EA9649C585F0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NestEggTests/Pods-NestEggTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FBD77B858D3395918BB48718 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NestEggUITests/Pods-NestEggUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FD2821D649FE6B4A3FFAA648 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NestEggUITests/Pods-NestEggUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9970FC0120288B2800B23273 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9970FC0D20288B2800B23273 /* ViewController.m in Sources */,
+				995C4962202984E900E04992 /* NestEggCache.swift in Sources */,
+				995C4960202984BE00E04992 /* NestEggHttpClient.swift in Sources */,
+				995C4969202A4BD500E04992 /* HttpClient.m in Sources */,
+				9970FC1820288B2800B23273 /* main.m in Sources */,
+				995C49662029F9BA00E04992 /* NestEgg+Errors.swift in Sources */,
+				9970FC3D20288B4200B23273 /* NestEgg.swift in Sources */,
+				9970FC0A20288B2800B23273 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9970FC1920288B2800B23273 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9970FC2220288B2800B23273 /* ImageHandlerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9970FC2420288B2800B23273 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9970FC2D20288B2800B23273 /* ImageHandlerUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9970FC1F20288B2800B23273 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9970FC0420288B2800B23273 /* NestEgg */;
+			targetProxy = 9970FC1E20288B2800B23273 /* PBXContainerItemProxy */;
+		};
+		9970FC2A20288B2800B23273 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9970FC0420288B2800B23273 /* NestEgg */;
+			targetProxy = 9970FC2920288B2800B23273 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9970FC0E20288B2800B23273 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9970FC0F20288B2800B23273 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9970FC1320288B2800B23273 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9970FC1420288B2800B23273 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9970FC2F20288B2800B23273 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		9970FC3020288B2800B23273 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9970FC3220288B2800B23273 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DEB13D4B92E04A72D241D93F /* Pods-NestEgg.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 3266HRC3Q2;
+				INFOPLIST_FILE = NestEgg/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.idomizrachi.NestEgg;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "NestEgg/lib/NestEgg-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9970FC3320288B2800B23273 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 45A5FB4F1626463775B245F5 /* Pods-NestEgg.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 3266HRC3Q2;
+				INFOPLIST_FILE = NestEgg/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.idomizrachi.NestEgg;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "NestEgg/lib/NestEgg-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		9970FC3520288B2800B23273 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 696D292F49CF2833A0B63379 /* Pods-NestEggTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3266HRC3Q2;
+				INFOPLIST_FILE = ImageHandlerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.idomizrachi.ImageHandlerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NestEgg.app/NestEgg";
+			};
+			name = Debug;
+		};
+		9970FC3620288B2800B23273 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1816BD5F3CB8B1ABE4211DC8 /* Pods-NestEggTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3266HRC3Q2;
+				INFOPLIST_FILE = ImageHandlerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.idomizrachi.ImageHandlerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NestEgg.app/NestEgg";
+			};
+			name = Release;
+		};
+		9970FC3820288B2800B23273 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FEE2480AAA9EF872CA939DA9 /* Pods-NestEggUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3266HRC3Q2;
+				INFOPLIST_FILE = ImageHandlerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.idomizrachi.ImageHandlerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ImageHandler;
+			};
+			name = Debug;
+		};
+		9970FC3920288B2800B23273 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 78D7EBB553A68242C79C98A4 /* Pods-NestEggUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3266HRC3Q2;
+				INFOPLIST_FILE = ImageHandlerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.idomizrachi.ImageHandlerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ImageHandler;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9970FC0020288B2800B23273 /* Build configuration list for PBXProject "NestEgg" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9970FC2F20288B2800B23273 /* Debug */,
+				9970FC3020288B2800B23273 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9970FC3120288B2800B23273 /* Build configuration list for PBXNativeTarget "NestEgg" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9970FC3220288B2800B23273 /* Debug */,
+				9970FC3320288B2800B23273 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9970FC3420288B2800B23273 /* Build configuration list for PBXNativeTarget "NestEggTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9970FC3520288B2800B23273 /* Debug */,
+				9970FC3620288B2800B23273 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9970FC3720288B2800B23273 /* Build configuration list for PBXNativeTarget "NestEggUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9970FC3820288B2800B23273 /* Debug */,
+				9970FC3920288B2800B23273 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9970FBFD20288B2800B23273 /* Project object */;
+}
