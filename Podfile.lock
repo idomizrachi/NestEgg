@@ -14,13 +14,16 @@ PODS:
   - AFNetworking/Serialization (3.2.0)
   - AFNetworking/UIKit (3.2.0):
     - AFNetworking/NSURLSession
+  - glucose (0.0.8)
 
 DEPENDENCIES:
   - AFNetworking (= 3.2.0)
+  - glucose (= 0.0.8)
 
 SPEC CHECKSUMS:
   AFNetworking: 8ac6017b94ea105479f7776e5288e48ae9c59bb4
+  glucose: 71a9a739d10c8210a7e02580c5e9618a4d01993e
 
-PODFILE CHECKSUM: 749263d4a3ed37631ba96b87ae9163b95c6f0113
+PODFILE CHECKSUM: 17cdee6425ff01a1144d4c567942672f59c3d8d0
 
 COCOAPODS: 1.4.0

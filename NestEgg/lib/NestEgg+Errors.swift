@@ -9,11 +9,16 @@
 import Foundation
 
 extension NestEgg {
+    
+    private static func errorDomain() -> String {
+        return "com.idomizrachi.nestegg"
+    }
+    
     public static func releasedError() -> NSError {
-        return NSError(domain: "NestEgg", code: 0, userInfo: nil)
+        return NSError(domain: self.errorDomain(), code: 1, userInfo: nil)
     }
     
     public static func notImageError() -> NSError {
-        return NSError(domain: "NestEgg", code: 0, userInfo: nil)
+        return NSError(domain: self.errorDomain(), code: 2, userInfo: nil)
     }
 }

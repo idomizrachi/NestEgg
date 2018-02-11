@@ -7,6 +7,7 @@ target 'NestEgg' do
 
   # Pods for ImageHandler
   pod 'AFNetworking', '3.2.0'
+  pod 'glucose', '0.0.8'
 
   target 'NestEggTests' do
     inherit! :search_paths

@@ -10,6 +10,7 @@
 		0325E384E34A2D06B3344AC4 /* Pods_ImageHandlerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30880AD502ED511A31A6FA0A /* Pods_ImageHandlerUITests.framework */; };
 		271124117480C31BB147BBF2 /* Pods_NestEggUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B1676B544F659B696F86FA /* Pods_NestEggUITests.framework */; };
 		3FCF8F1782481ED79BA1DC61 /* Pods_ImageHandlerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B0B28E203D13AF1F2665912 /* Pods_ImageHandlerTests.framework */; };
+		9943A9B8202B013C00E16E59 /* String+MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9943A9B7202B013C00E16E59 /* String+MD5.swift */; };
 		995C4960202984BE00E04992 /* NestEggHttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995C495F202984BE00E04992 /* NestEggHttpClient.swift */; };
 		995C4962202984E900E04992 /* NestEggCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995C4961202984E900E04992 /* NestEggCache.swift */; };
 		995C49662029F9BA00E04992 /* NestEgg+Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995C49652029F9BA00E04992 /* NestEgg+Errors.swift */; };
@@ -23,6 +24,8 @@
 		9970FC2220288B2800B23273 /* ImageHandlerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9970FC2120288B2800B23273 /* ImageHandlerTests.m */; };
 		9970FC2D20288B2800B23273 /* ImageHandlerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9970FC2C20288B2800B23273 /* ImageHandlerUITests.m */; };
 		9970FC3D20288B4200B23273 /* NestEgg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9970FC3C20288B4200B23273 /* NestEgg.swift */; };
+		99C3AA1C202F7895003126BC /* ImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 99C3AA1B202F7895003126BC /* ImageCell.m */; };
+		99C3AA2120300BD6003126BC /* ImageCellViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 99C3AA2020300BD6003126BC /* ImageCellViewModel.m */; };
 		CA5A535C8133C348D78ADC6D /* Pods_NestEgg.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAAA287B918899CBECDCDAB1 /* Pods_NestEgg.framework */; };
 		FB61753502F6E2416CE5E07A /* Pods_NestEggTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED4E6DAFFB2F348744182C69 /* Pods_NestEggTests.framework */; };
 /* End PBXBuildFile section */
@@ -57,6 +60,7 @@
 		78D7EBB553A68242C79C98A4 /* Pods-NestEggUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NestEggUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NestEggUITests/Pods-NestEggUITests.release.xcconfig"; sourceTree = "<group>"; };
 		881A494A826D115B1C6E2B29 /* Pods_ImageHandler.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImageHandler.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DE8E66AEE47242F32485F88 /* Pods-ImageHandlerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageHandlerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ImageHandlerTests/Pods-ImageHandlerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		9943A9B7202B013C00E16E59 /* String+MD5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+MD5.swift"; sourceTree = "<group>"; };
 		995C495F202984BE00E04992 /* NestEggHttpClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NestEggHttpClient.swift; sourceTree = "<group>"; };
 		995C4961202984E900E04992 /* NestEggCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NestEggCache.swift; sourceTree = "<group>"; };
 		995C49632029A44B00E04992 /* libapple_crypto.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libapple_crypto.tbd; path = usr/lib/libapple_crypto.tbd; sourceTree = SDKROOT; };
@@ -81,6 +85,10 @@
 		9970FC2E20288B2800B23273 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9970FC3B20288B4200B23273 /* NestEgg-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NestEgg-Bridging-Header.h"; sourceTree = "<group>"; };
 		9970FC3C20288B4200B23273 /* NestEgg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NestEgg.swift; sourceTree = "<group>"; };
+		99C3AA1A202F7895003126BC /* ImageCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageCell.h; sourceTree = "<group>"; };
+		99C3AA1B202F7895003126BC /* ImageCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageCell.m; sourceTree = "<group>"; };
+		99C3AA1F20300BD6003126BC /* ImageCellViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageCellViewModel.h; sourceTree = "<group>"; };
+		99C3AA2020300BD6003126BC /* ImageCellViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageCellViewModel.m; sourceTree = "<group>"; };
 		B8260233F9EC14D940B3203C /* Pods-ImageHandler.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageHandler.release.xcconfig"; path = "Pods/Target Support Files/Pods-ImageHandler/Pods-ImageHandler.release.xcconfig"; sourceTree = "<group>"; };
 		BAAA287B918899CBECDCDAB1 /* Pods_NestEgg.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NestEgg.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEB13D4B92E04A72D241D93F /* Pods-NestEgg.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NestEgg.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NestEgg/Pods-NestEgg.debug.xcconfig"; sourceTree = "<group>"; };
@@ -177,13 +185,11 @@
 		9970FC0720288B2800B23273 /* NestEgg */ = {
 			isa = PBXGroup;
 			children = (
+				99C3AA1E2030088C003126BC /* Models */,
+				99C3AA1D20300883003126BC /* Views */,
 				9970FC3A20288B2E00B23273 /* lib */,
 				9970FC0820288B2800B23273 /* AppDelegate.h */,
 				9970FC0920288B2800B23273 /* AppDelegate.m */,
-				9970FC0B20288B2800B23273 /* ViewController.h */,
-				9970FC0C20288B2800B23273 /* ViewController.m */,
-				995C4968202A4BD500E04992 /* HttpClient.h */,
-				995C4967202A4BD400E04992 /* HttpClient.m */,
 				9970FC0E20288B2800B23273 /* Main.storyboard */,
 				9970FC1120288B2800B23273 /* Assets.xcassets */,
 				9970FC1320288B2800B23273 /* LaunchScreen.storyboard */,
@@ -219,8 +225,31 @@
 				995C495F202984BE00E04992 /* NestEggHttpClient.swift */,
 				995C4961202984E900E04992 /* NestEggCache.swift */,
 				995C49652029F9BA00E04992 /* NestEgg+Errors.swift */,
+				9943A9B7202B013C00E16E59 /* String+MD5.swift */,
 			);
 			path = lib;
+			sourceTree = "<group>";
+		};
+		99C3AA1D20300883003126BC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9970FC0B20288B2800B23273 /* ViewController.h */,
+				9970FC0C20288B2800B23273 /* ViewController.m */,
+				99C3AA1A202F7895003126BC /* ImageCell.h */,
+				99C3AA1B202F7895003126BC /* ImageCell.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		99C3AA1E2030088C003126BC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				995C4968202A4BD500E04992 /* HttpClient.h */,
+				995C4967202A4BD400E04992 /* HttpClient.m */,
+				99C3AA1F20300BD6003126BC /* ImageCellViewModel.h */,
+				99C3AA2020300BD6003126BC /* ImageCellViewModel.m */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -385,10 +414,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-NestEgg/Pods-NestEgg-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/glucose/glucose.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/glucose.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -517,11 +548,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				9970FC0D20288B2800B23273 /* ViewController.m in Sources */,
+				99C3AA1C202F7895003126BC /* ImageCell.m in Sources */,
 				995C4962202984E900E04992 /* NestEggCache.swift in Sources */,
 				995C4960202984BE00E04992 /* NestEggHttpClient.swift in Sources */,
+				9943A9B8202B013C00E16E59 /* String+MD5.swift in Sources */,
 				995C4969202A4BD500E04992 /* HttpClient.m in Sources */,
 				9970FC1820288B2800B23273 /* main.m in Sources */,
 				995C49662029F9BA00E04992 /* NestEgg+Errors.swift in Sources */,
+				99C3AA2120300BD6003126BC /* ImageCellViewModel.m in Sources */,
 				9970FC3D20288B4200B23273 /* NestEgg.swift in Sources */,
 				9970FC0A20288B2800B23273 /* AppDelegate.m in Sources */,
 			);

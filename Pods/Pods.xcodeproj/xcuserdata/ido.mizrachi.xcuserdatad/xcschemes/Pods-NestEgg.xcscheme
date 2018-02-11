@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0920"
+   LastUpgradeVersion = "0700"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5AD1311BAD2BD7550FA5E171A1A241E5"
+               BlueprintIdentifier = "CDD968432BC9D53B0DD8F3B3C924CA55"
                BuildableName = "Pods_NestEgg.framework"
                BlueprintName = "Pods-NestEgg"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -47,7 +47,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "5AD1311BAD2BD7550FA5E171A1A241E5"
+            BlueprintIdentifier = "CDD968432BC9D53B0DD8F3B3C924CA55"
             BuildableName = "Pods_NestEgg.framework"
             BlueprintName = "Pods-NestEgg"
             ReferencedContainer = "container:Pods.xcodeproj">

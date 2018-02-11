@@ -16,7 +16,7 @@ import Foundation
     init(url: String, headers: [String:String]? = nil) {
         self.url = url
         self.headers = headers
-    }
+    }    
 }
 
 @objc public class NestEggHttpResponse: NSObject {
