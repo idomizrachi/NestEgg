@@ -17,11 +17,11 @@ public typealias NestEggErrorCompletionBlock = (NSError?) -> ()
 //MARK: Private class
 private class ActiveRequestCallbacks: Equatable {
     var request: NestEggHttpRequest
-    var callbacks: [(UIImage?, NSError?) -> ()]
+    var callbacks: [NestEggImageCompletionBlock]
     
-    init(request: NestEggHttpRequest, callbacks: [NestEggImageCompletionBlock]) {
+    init(request: NestEggHttpRequest) {
         self.request = request
-        self.callbacks = callbacks
+        self.callbacks = []
     }
     
     static func ==(lhs: ActiveRequestCallbacks, rhs: ActiveRequestCallbacks) -> Bool {
@@ -47,7 +47,7 @@ private class ActiveRequestCallbacks: Equatable {
     }
     
     
-    public func fetch(url: String, completion: @escaping NestEggImageCompletionBlock) {
+    public func fetch(url: String, completion: NestEggImageCompletionBlock?) {
         self.queue.async { [weak self] in
             guard let strongSelf = self else {
                 NestEgg.invokeCompletionBlock(image: nil, error: NestEgg.releasedError(), completion: completion)
@@ -57,7 +57,7 @@ private class ActiveRequestCallbacks: Equatable {
         }
     }
     
-    private func fetchInternal(url: String, completion: @escaping NestEggImageCompletionBlock) {
+    private func fetchInternal(url: String, completion: NestEggImageCompletionBlock?) {
         //Check if image exists in cache
         if let cachedImage = self.fetchFromCache(url: url) {
             NestEgg.invokeCompletionBlock(image: cachedImage, error: nil, completion: completion)
@@ -67,19 +67,33 @@ private class ActiveRequestCallbacks: Equatable {
         self.download(url: url, completion: completion)
     }
     
-    public func fetch(url: String, imageView: UIImageView, completion: @escaping NestEggErrorCompletionBlock) {
+    public func fetch(url: String, imageView: UIImageView, completion: NestEggErrorCompletionBlock?) {
         weak var weakImageView: UIImageView? = imageView
         fetch(url: url) { (image, error) in
             if error == nil {
                 weakImageView?.image = image
             }
-            completion(error)
+            NestEgg.invokeCompletionBlock(error: error, completion: completion)
         }
     }
     
-    private static func invokeCompletionBlock(image: UIImage?, error: NSError?, completion: @escaping NestEggImageCompletionBlock) {
-        DispatchQueue.main.async {
-            completion(image, error)
+    private static func invokeCompletionBlock(image: UIImage?, error: NSError?, completion: NestEggImageCompletionBlock?) {
+        if completion != nil {
+            DispatchQueue.main.async {
+                if let nonNilCompletion = completion {
+                    nonNilCompletion(image, error)
+                }
+            }
+        }
+    }
+    
+    private static func invokeCompletionBlock(error: NSError?, completion: NestEggErrorCompletionBlock?) {
+        if completion != nil {
+            DispatchQueue.main.async {
+                if let nonNilCompletion = completion {
+                    nonNilCompletion(error)
+                }
+            }
         }
     }
 
@@ -103,12 +117,17 @@ private class ActiveRequestCallbacks: Equatable {
         }
     }
     
-    private func download(url: String, completion: @escaping NestEggImageCompletionBlock) {
+    private func download(url: String, completion: NestEggImageCompletionBlock?) {
         let request: NestEggHttpRequest = NestEggHttpRequest(url: url)
         if let activeRequest = self.activeRequest(newRequest: request) {
-            activeRequest.callbacks.append(completion)
+            if let nonNilCompletion = completion {
+                activeRequest.callbacks.append(nonNilCompletion)
+            }
         } else {
-            let activeRequest: ActiveRequestCallbacks = ActiveRequestCallbacks(request: request, callbacks: [completion])
+            let activeRequest: ActiveRequestCallbacks = ActiveRequestCallbacks(request: request)
+            if let nonNilCompletion = completion {
+                activeRequest.callbacks.append(nonNilCompletion)
+            }
             self.activeRequests.append(activeRequest)
             self.httpClient.execute(request: request, response: { [weak self] (response) in
                 guard let strongSelf = self else {

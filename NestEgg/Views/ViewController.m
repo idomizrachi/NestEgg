@@ -31,8 +31,16 @@
     
     [self.view addSubview: self.collectionView];
     [self setupConstraints];
-    [self createViewModel];
+    [self.imageHandler preheatWithUrl: @"http://myanmareiti.org/sites/default/files/sample-5_0.jpg"];
     
+}
+
+-(void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear: animated];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(10 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self createViewModel];
+    });
 }
 
 -(void)createViewModel {
@@ -43,7 +51,7 @@
         [viewModels addObject: viewModel];
     }
     self.items = [viewModels copy];
-    
+    [self.collectionView reloadData];
 }
 
 -(void)setupConstraints {
