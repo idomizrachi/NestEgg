@@ -29,7 +29,7 @@ private class ActiveRequestCallbacks: Equatable {
     }
 }
 
-//MARK: Public
+//MARK: Public classes
 @objc public class NestEgg: NSObject {
     private let httpClient: NestEggHttpClient
     private let cache: NestEggCache
@@ -46,7 +46,7 @@ private class ActiveRequestCallbacks: Equatable {
         self.init(httpClient: httpClient, cache: cache)
     }
     
-    
+    //#MARK: Public Methods
     public func fetch(url: String, completion: NestEggImageCompletionBlock?) {
         self.queue.async { [weak self] in
             guard let strongSelf = self else {
@@ -57,16 +57,6 @@ private class ActiveRequestCallbacks: Equatable {
         }
     }
     
-    private func fetchInternal(url: String, completion: NestEggImageCompletionBlock?) {
-        //Check if image exists in cache
-        if let cachedImage = self.fetchFromCache(url: url) {
-            NestEgg.invokeCompletionBlock(image: cachedImage, error: nil, completion: completion)
-            return
-        }
-        //Download the image
-        self.download(url: url, completion: completion)
-    }
-    
     public func fetch(url: String, imageView: UIImageView, completion: NestEggErrorCompletionBlock?) {
         weak var weakImageView: UIImageView? = imageView
         fetch(url: url) { (image, error) in
@@ -75,6 +65,26 @@ private class ActiveRequestCallbacks: Equatable {
             }
             NestEgg.invokeCompletionBlock(error: error, completion: completion)
         }
+    }
+    
+    public func refresh(url: String, completion: NestEggImageCompletionBlock?) {
+        self.cache.removeObject(forKey: url)
+        self.fetch(url: url, completion: completion)
+    }
+    
+    public func clear() {
+        self.cache.clear()
+    }
+    
+    //MARK: Private Methods
+    private func fetchInternal(url: String, completion: NestEggImageCompletionBlock?) {
+        //Check if image exists in cache
+        if let cachedImage = self.fetchFromCache(url: url) {
+            NestEgg.invokeCompletionBlock(image: cachedImage, error: nil, completion: completion)
+            return
+        }
+        //Download the image
+        self.download(url: url, completion: completion)
     }
     
     private static func invokeCompletionBlock(image: UIImage?, error: NSError?, completion: NestEggImageCompletionBlock?) {

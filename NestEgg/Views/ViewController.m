@@ -15,8 +15,6 @@
 
 @interface ViewController ()<UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 
-@property (weak, nonatomic) IBOutlet UIImageView *imageView;
-@property (weak, nonatomic) IBOutlet UILabel *label;
 @property (nonatomic, strong) NestEgg *imageHandler;
 @property (nonatomic, strong) UICollectionView *collectionView;
 @property (nonatomic, strong) NSArray<ImageCellViewModel *> *items;
@@ -29,6 +27,8 @@
 -(void)viewDidLoad {
     [super viewDidLoad];
     
+    UIBarButtonItem *clearButton = [[UIBarButtonItem alloc] initWithTitle:@"Clear" style:UIBarButtonItemStylePlain target:self action:@selector(clearButtonPressed:)];
+    self.navigationItem.rightBarButtonItem = clearButton;
     [self.view addSubview: self.collectionView];
     [self setupConstraints];
     [self.imageHandler preheatWithUrl: @"http://myanmareiti.org/sites/default/files/sample-5_0.jpg"];
@@ -38,7 +38,7 @@
 -(void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear: animated];
     
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(10 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [self createViewModel];
     });
 }
@@ -61,7 +61,7 @@
 -(NestEgg *)imageHandler {
     if (! _imageHandler) {
         HttpClient *httpClient = [HttpClient new];
-        NestEggDefaultCache *cache = [[NestEggDefaultCache alloc] initWithFolder: @"image-cache" timeoutInterval: 5];
+        NestEggDefaultCache *cache = [[NestEggDefaultCache alloc] initWithFolder: @"image-cache" timeoutInterval: 30];
         _imageHandler = [[NestEgg alloc] initWithHttpClient:httpClient cache:cache];
     }
     return _imageHandler;
@@ -79,59 +79,10 @@
     return _collectionView;
 }
 
-- (IBAction)loadImage:(id)sender {
-//    __weak typeof(self) weakSelf = self;
-    
-    
-//    [self.imageHandler fetchWithUrl:url completion:^(UIImage * _Nullable image, NSError * _Nullable error) {
-//        __strong typeof(self) strongSelf = weakSelf;
-//        if (! strongSelf) {
-//            return;
-//        }
-//        if (error) {
-//            strongSelf.label.text = @"Error";
-//        } else {
-//            strongSelf.label.text = @"Done";
-//            self.imageView.image = image;
-//        }
-//    }];
-    
-    [self fetchImage];
-    
-//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-//        __strong typeof(self) strongSelf = weakSelf;
-//        [strongSelf fetchImage];
-//    });
-}
 
--(void)fetchImage {
-    __weak typeof(self) weakSelf = self;
-    self.label.text = @"Loading...";
-    NSString *url = @"http://imaging.nikon.com/lineup/lens/zoom/normalzoom/af-s_dx_18-140mmf_35-56g_ed_vr/img/sample/sample1_l.jpg";
-    [self.imageHandler fetchWithUrl:url imageView:self.imageView completion:^(NSError * _Nullable error) {
-        __strong typeof(self) strongSelf = weakSelf;
-        if (! strongSelf) {
-            return;
-        }
-        NSLog(@"Finished 1");
-        if (error) {
-            strongSelf.label.text = @"Error";
-        } else {
-            strongSelf.label.text = @"Done";
-        }
-    }];
-    [self.imageHandler fetchWithUrl:url imageView:self.imageView completion:^(NSError * _Nullable error) {
-        __strong typeof(self) strongSelf = weakSelf;
-        if (! strongSelf) {
-            return;
-        }
-        NSLog(@"Finished 2");
-        if (error) {
-            strongSelf.label.text = @"Error";
-        } else {
-            strongSelf.label.text = @"Done";
-        }
-    }];
+-(void)clearButtonPressed:(id)sender {
+    [self.imageHandler clear];
+    [self.collectionView reloadData];
 }
 
 - (nonnull __kindof UICollectionViewCell *)collectionView:(nonnull UICollectionView *)collectionView cellForItemAtIndexPath:(nonnull NSIndexPath *)indexPath {
@@ -140,6 +91,7 @@
     cell.viewModel = self.items[indexPath.row];
     return cell;
 }
+
 
 -(void)collectionView:(UICollectionView *)collectionView willDisplayCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath {
     ImageCell *imageCell = (ImageCell *)cell;

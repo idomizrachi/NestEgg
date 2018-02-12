@@ -37,18 +37,9 @@
 }
 
 -(void)prepareForDisplay {
-    NSLog(@"Loading %@", self.viewModel.url);
+    self.imageView.image = nil;
     [self.viewModel updateImageView: self.imageView];
 }
-
-/*
--(void)setUrl:(NSString *)url {
-    _url = url;
-    [self.imageHandler fetchWithUrl:url imageView:self.imageView completion:^(NSError * _Nullable error) {
-        NSLog(@"Done - %@", url);
-    }];
-}
-*/
 
 -(UIImageView *)imageView {
     if (! _imageView) {
@@ -60,7 +51,7 @@
 
 
 -(void)viewModelDidUpdate:(ImageCellViewModel *)viewModel {
-    [self.imageView setNeedsDisplay];
+    
 }
 
 @end

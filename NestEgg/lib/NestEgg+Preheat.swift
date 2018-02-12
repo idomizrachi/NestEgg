@@ -10,11 +10,11 @@ import Foundation
 
 extension NestEgg {
     
-    public func preheat(url: String) {
+    @objc public func preheat(url: String) {
         self.fetch(url: url, completion: nil)
     }
     
-    public func preheat(urls: [String]) {
+    @objc public func preheat(urls: [String]) {
         for url in urls {
             self.preheat(url: url)
         }
